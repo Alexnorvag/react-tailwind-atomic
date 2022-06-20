@@ -1,5 +1,4 @@
-// import { IconLink } from "./components(molecules)/icon-link";
-import { Header } from "./containers(organisms)/header";
+import { PrimaryLayout } from "./layouts(templates)/primary";
 
 function App() {
   return (
@@ -54,7 +53,7 @@ function App() {
 
       <IconLink /> */}
 
-      <Header />
+      <PrimaryLayout />
     </div>
   );
 }
