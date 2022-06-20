@@ -1,5 +1,5 @@
-import { IconButton } from "./components(molecules)/icon-button";
-import { IconLink } from "./components(molecules)/icon-link";
+// import { IconLink } from "./components(molecules)/icon-link";
+import { Header } from "./containers(organisms)/header";
 
 function App() {
   return (
@@ -48,11 +48,13 @@ function App() {
 
       <Link to="/home">Home</Link> */}
 
-      <IconLink icon="eye" iconSize={30} to="/home">
+      {/* <IconLink icon="eye" iconSize={30} to="/home">
         Go to Home
       </IconLink>
 
-      <IconLink />
+      <IconLink /> */}
+
+      <Header />
     </div>
   );
 }
