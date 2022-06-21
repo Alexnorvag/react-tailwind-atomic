@@ -9,7 +9,7 @@ export const Header = ({ position }) => {
   return (
     <header className={clsx("flex items-center py-3 px-6", position)}>
       <div className="flex-1">
-        <IconLink icon="eye" iconSize={70} to="/">
+        <IconLink icon="eye" iconSize={70} to="/" color="secondary">
           <Heading level={2}>RTAD</Heading>
         </IconLink>
       </div>
