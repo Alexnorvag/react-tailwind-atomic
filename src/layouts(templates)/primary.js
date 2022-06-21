@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
-import { Heading } from "../components(molecules)/common(atoms)/heading";
 
-import { ProfileCard } from "../components(molecules)/profile-card";
 import { Header } from "../containers(organisms)/header";
 import { Section } from "../containers(organisms)/section";
+import { Heading } from "../components(molecules)/common(atoms)/heading";
+import { ProfileCard } from "../components(molecules)/profile-card";
 
 export const PrimaryLayout = ({
   page,

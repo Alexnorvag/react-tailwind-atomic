@@ -1,5 +1,5 @@
-import clsx from "clsx";
 import PropTypes from "prop-types";
+import clsx from "clsx";
 
 export const Image = ({ src, alt, classes, ...props }) => (
   <img

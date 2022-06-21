@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./App";
 import { HomePage } from "./pages/home";
 import { AdminPage } from "./pages/admin";
+import { LoginPage } from "./pages/login";
 
 import "./index.css";
 
@@ -15,6 +16,7 @@ root.render(
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/templates" element={<App />} />
       </Routes>
     </BrowserRouter>

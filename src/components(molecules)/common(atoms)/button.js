@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
@@ -32,13 +31,13 @@ export const Button = ({
   ...props
 }) => {
   const classProps = clsx(
-    "flex whitespace-nowrap items-center m-2 transition-colors duration-150 focus:shadow-outline",
+    "flex whitespace-nowrap items-center transition-colors duration-150 focus:shadow-outline",
     `${
       disabled
         ? "text-gray-400 bg-gray-100 border border-gray-400 cursor-default hover:bg-gray-200"
         : ButtonColor[color]
     }`,
-    `${children ? "max-w-full w-auto" : "w-20"}`,
+    `${children ? "max-w-full w-fit" : "w-20"}`,
     { [ButtonSize[size]]: hasText },
     { "h-min rounded-full aspect-square justify-center": !hasText && children },
     ButtonVariant[variant],
@@ -57,6 +56,7 @@ Button.propTypes = {
   variant: PropTypes.oneOf(["default", "outline"]),
   color: PropTypes.oneOf(["default", "success"]),
   disabled: PropTypes.bool,
+  hasText: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -64,6 +64,7 @@ Button.defaultProps = {
   variant: "default",
   color: "default",
   disabled: false,
+  hasText: true,
 
   onClick: () => {},
 };
