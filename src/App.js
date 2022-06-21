@@ -1,8 +1,6 @@
-// import { Avatar } from "./components(molecules)/common(atoms)/avatar";
-// import { PrimaryLayout } from "./layouts(templates)/primary";
-
+import backgroundSrc from "./assets/images/background.jpg";
 // import avatarSrc from "./assets/images/avatar.jpg";
-import { Paragraph } from "./components(molecules)/common(atoms)/paragraph";
+import { ProfileCard } from "./components(molecules)/profile-card";
 
 function App() {
   return (
@@ -57,25 +55,11 @@ function App() {
 
       <IconLink /> */}
 
-      {/* <Avatar size="sm" shape="rounded" outline src={avatarSrc} alt="avatar" />
+      <ProfileCard size="sm" classes="gap-4" center />
 
-      <Avatar size="md" shape="circle" outline src={avatarSrc} alt="avatar" />
+      <ProfileCard cover={backgroundSrc} size="md" classes="gap-4" />
 
-      <Avatar size="xs" shape="hexagon" outline src={avatarSrc} alt="avatar" />
-
-      <Avatar size="lg" shape="hexagon" outline src={avatarSrc} alt="avatar" />
-
-      <PrimaryLayout /> */}
-
-      <Paragraph>Default paragraph</Paragraph>
-
-      <Paragraph color="primary" indent>
-        Primary paragraph
-      </Paragraph>
-
-      <Paragraph color="dark">Dark paragraph</Paragraph>
-
-      <Paragraph color="light">Light paragraph</Paragraph>
+      <ProfileCard cover={backgroundSrc} size="lg" classes="gap-4" center />
     </div>
   );
 }
