@@ -17,6 +17,7 @@ export const LoginPage = () => {
         {
           id: "password",
           label: "Password",
+          type: "password",
           placeholder: "password",
         },
       ]}
