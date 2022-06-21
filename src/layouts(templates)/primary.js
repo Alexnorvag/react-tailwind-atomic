@@ -8,15 +8,19 @@ export const PrimaryLayout = () => {
     <>
       <Header />
 
-      <Section color="secondary">Medium section</Section>
+      <Section color="secondary">Medium secondary section</Section>
 
-      <Section>Medium section</Section>
+      <Section>Medium default section</Section>
 
-      <Section color="primary" size="sm">
-        Small section
+      <Section size="sm" color="primary">
+        Small primary section
       </Section>
 
-      <Section size="lg">Large section</Section>
+      <Section size="lg">Large default section</Section>
+
+      <Section size="xs" color="primary">
+        Extra small default section
+      </Section>
     </>
   );
 };

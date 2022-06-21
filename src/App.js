@@ -1,4 +1,7 @@
+import { Avatar } from "./components(molecules)/avatar";
 import { PrimaryLayout } from "./layouts(templates)/primary";
+
+import avatarSrc from "./assets/images/avatar.jpg";
 
 function App() {
   return (
@@ -52,6 +55,14 @@ function App() {
       </IconLink>
 
       <IconLink /> */}
+
+      <Avatar size="sm" shape="rounded" outline src={avatarSrc} alt="avatar" />
+
+      <Avatar size="md" shape="circle" outline src={avatarSrc} alt="avatar" />
+
+      <Avatar size="xs" shape="hexagon" outline src={avatarSrc} alt="avatar" />
+
+      <Avatar size="lg" shape="hexagon" outline src={avatarSrc} alt="avatar" />
 
       <PrimaryLayout />
     </div>
