@@ -1,4 +1,4 @@
-import { Avatar } from "./components(molecules)/avatar";
+import { Avatar } from "./components(molecules)/common(atoms)/avatar";
 import { PrimaryLayout } from "./layouts(templates)/primary";
 
 import avatarSrc from "./assets/images/avatar.jpg";

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import PropTypes from "prop-types";
 
-import { Image } from "./common(atoms)/image";
+import { Image } from "./image";
 
 const AvatarSize = {
   xs: "h-6",
