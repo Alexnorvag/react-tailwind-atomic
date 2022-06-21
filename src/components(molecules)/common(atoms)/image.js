@@ -1,7 +1,13 @@
+import clsx from "clsx";
 import PropTypes from "prop-types";
 
-export const Image = ({ src, alt, ...props }) => (
-  <img className="w-full h-full object-cover" src={src} alt={alt} {...props} />
+export const Image = ({ src, alt, classes, ...props }) => (
+  <img
+    className={clsx("w-full object-cover", classes)}
+    src={src}
+    alt={alt}
+    {...props}
+  />
 );
 
 Image.propTypes = {

@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Avatar } from "./common(atoms)/avatar";
 import { Card } from "./common(atoms)/card";
 import { Heading } from "./common(atoms)/heading";
+import { Image } from "./common(atoms)/image";
 import { Paragraph } from "./common(atoms)/paragraph";
 
 const ProfileCardOffsetTop = {
@@ -32,18 +33,20 @@ export const ProfileCard = ({
       {...props}
     >
       {cover && (
-        <img
-          className="absolute inset-0 w-full aspect-video object-cover"
+        <Image
+          classes="absolute inset-0 w-full aspect-video object-cover"
           src={cover}
           alt="cover"
         />
       )}
 
-      <Avatar size="lg" shape="hexagon" src={avatarSrc} alt="avatar" />
+      <div className="flex flex-col w-fit items-center gap-4 z-10 bg-slate-200 bg-opacity-90 rounded-lg p-5">
+        <Avatar size="lg" shape="hexagon" src={avatarSrc} alt="avatar" />
 
-      <Heading level={3}>{title}</Heading>
+        <Heading level={3}>{title}</Heading>
 
-      <Paragraph>{subtitile}</Paragraph>
+        <Paragraph>{subtitile}</Paragraph>
+      </div>
     </Card>
   );
 };
@@ -54,10 +57,12 @@ ProfileCard.propTypes = {
   title: PropTypes.string,
   subtitile: PropTypes.string,
   size: PropTypes.oneOf(["sm", "md", "lg"]),
+  center: PropTypes.bool,
 };
 
 ProfileCard.defaultProps = {
   title: "Name Surname",
   subtitile: "Short Description",
   size: "md",
+  center: true,
 };

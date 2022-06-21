@@ -1,6 +1,7 @@
-import backgroundSrc from "./assets/images/background.jpg";
-// import avatarSrc from "./assets/images/avatar.jpg";
 import { ProfileCard } from "./components(molecules)/profile-card";
+
+import backgroundSrc from "./assets/images/background.jpg";
+import avatarSrc from "./assets/images/avatar.jpg";
 
 function App() {
   return (
@@ -55,11 +56,11 @@ function App() {
 
       <IconLink /> */}
 
-      <ProfileCard size="sm" classes="gap-4" center />
+      <ProfileCard avatarSrc={avatarSrc} cover={backgroundSrc} size="sm" />
 
-      <ProfileCard cover={backgroundSrc} size="md" classes="gap-4" />
+      <ProfileCard avatarSrc={avatarSrc} cover={backgroundSrc} size="md" />
 
-      <ProfileCard cover={backgroundSrc} size="lg" classes="gap-4" center />
+      <ProfileCard avatarSrc={avatarSrc} cover={backgroundSrc} size="lg" />
     </div>
   );
 }
