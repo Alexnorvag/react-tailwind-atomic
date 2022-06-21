@@ -1,7 +1,4 @@
-import { ProfileCard } from "./components(molecules)/profile-card";
-
-import backgroundSrc from "./assets/images/background.jpg";
-import avatarSrc from "./assets/images/avatar.jpg";
+import { PrimaryLayout } from "./layouts(templates)/primary";
 
 function App() {
   return (
@@ -56,11 +53,7 @@ function App() {
 
       <IconLink /> */}
 
-      <ProfileCard avatarSrc={avatarSrc} cover={backgroundSrc} size="sm" />
-
-      <ProfileCard avatarSrc={avatarSrc} cover={backgroundSrc} size="md" />
-
-      <ProfileCard avatarSrc={avatarSrc} cover={backgroundSrc} size="lg" />
+      <PrimaryLayout />
     </div>
   );
 }

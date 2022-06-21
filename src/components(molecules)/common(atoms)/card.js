@@ -10,9 +10,9 @@ const CardSize = {
 export const Card = ({ size, center, children, classes }) => (
   <div
     className={clsx(
-      "flex flex-col rounded overflow-hidden shadow-lg hover:bg-slate-50",
+      "flex flex-col w-full rounded overflow-hidden shadow-lg bg-white hover:bg-slate-50",
       CardSize[size],
-      { "items-center": center },
+      { "items-center text-center": center },
       classes
     )}
   >

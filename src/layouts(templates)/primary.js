@@ -1,26 +1,52 @@
-// header + post
+import PropTypes from "prop-types";
+import { Heading } from "../components(molecules)/common(atoms)/heading";
 
+import { ProfileCard } from "../components(molecules)/profile-card";
 import { Header } from "../containers(organisms)/header";
 import { Section } from "../containers(organisms)/section";
 
-export const PrimaryLayout = () => {
-  return (
-    <>
-      <Header />
+export const PrimaryLayout = ({
+  page,
+  cover,
+  avatar,
+  profileSize,
+  title,
+  subtitile,
+}) => (
+  <>
+    <Header />
 
-      <Section color="secondary">Medium secondary section</Section>
+    <Section size="sm" classes="flex flex-col items-center gap-8">
+      <Heading level={5} classes="text-center">
+        {page}
+      </Heading>
 
-      <Section>Medium default section</Section>
+      <ProfileCard
+        avatarSrc={avatar}
+        cover={cover}
+        size={profileSize}
+        title={title}
+        subtitile={subtitile}
+      />
+    </Section>
+  </>
+);
 
-      <Section size="sm" color="primary">
-        Small primary section
-      </Section>
+PrimaryLayout.propTypes = {
+  cover: PropTypes.string,
+  avatar: PropTypes.string,
+  title: PropTypes.string,
+  subtitile: PropTypes.string,
+  profileSize: PropTypes.oneOf(["sm", "md", "lg"]),
+  center: PropTypes.bool,
+};
 
-      <Section size="lg">Large default section</Section>
-
-      <Section size="xs" color="primary">
-        Extra small default section
-      </Section>
-    </>
-  );
+PrimaryLayout.defaultProps = {
+  page: "Primary template",
+  cover: "https://via.placeholder.com/200",
+  avatar: "https://via.placeholder.com/70",
+  title: "Name Surname",
+  subtitile: "Short Description",
+  profileSize: "sm",
+  center: true,
 };

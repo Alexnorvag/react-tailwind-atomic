@@ -9,7 +9,7 @@ const SectionSize = {
 };
 
 const SectionColor = {
-  default: "bg-slate-50",
+  default: "bg-white",
   primary: "bg-blue-400",
   secondary: "bg-slate-400",
 };
@@ -19,7 +19,8 @@ export const Section = ({ size, color, classes, children, ...props }) => (
     className={clsx(
       "container mx-auto",
       SectionSize[size],
-      SectionColor[color]
+      SectionColor[color],
+      classes
     )}
     {...props}
   >

@@ -1,5 +1,5 @@
-import clsx from "clsx";
 import PropTypes from "prop-types";
+import clsx from "clsx";
 
 import { Avatar } from "./common(atoms)/avatar";
 import { Card } from "./common(atoms)/card";
@@ -40,7 +40,11 @@ export const ProfileCard = ({
         />
       )}
 
-      <div className="flex flex-col w-fit items-center gap-4 z-10 bg-slate-200 bg-opacity-90 rounded-lg p-5">
+      <div
+        className={clsx("flex flex-col w-fit items-center gap-4 ", {
+          "p-5 bg-slate-200 bg-opacity-90 rounded-lg z-10": cover,
+        })}
+      >
         <Avatar size="lg" shape="hexagon" src={avatarSrc} alt="avatar" />
 
         <Heading level={3}>{title}</Heading>
