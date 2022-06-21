@@ -10,8 +10,8 @@ export const HomePage = () => {
       cover={backgroundSrc}
       avatar={avatarSrc}
       profileSize="md"
-      title="Mister"
-      subtitile="Crocodile"
+      title="Mister Crocodile"
+      subtitile="Cold-blooded, green good-natured. He loves to sing while no one is listening."
     />
   );
 };

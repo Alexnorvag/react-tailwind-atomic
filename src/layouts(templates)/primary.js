@@ -12,9 +12,10 @@ export const PrimaryLayout = ({
   profileSize,
   title,
   subtitile,
+  links,
 }) => (
   <>
-    <Header />
+    <Header links={links} />
 
     <Section size="sm" classes="flex flex-col items-center gap-8">
       <Heading level={5} classes="text-center">
@@ -39,6 +40,12 @@ PrimaryLayout.propTypes = {
   subtitile: PropTypes.string,
   profileSize: PropTypes.oneOf(["sm", "md", "lg"]),
   center: PropTypes.bool,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      to: PropTypes.string,
+      name: PropTypes.string,
+    })
+  ),
 };
 
 PrimaryLayout.defaultProps = {
@@ -49,4 +56,9 @@ PrimaryLayout.defaultProps = {
   subtitile: "Short Description",
   profileSize: "sm",
   center: true,
+  links: [
+    { to: "/", name: "Home" },
+    { to: "/admin", name: "Admin" },
+    { to: "/login", name: "Logout" },
+  ],
 };

@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
+import clsx from "clsx";
 
 import { TableCell } from "./common(atoms)/table-cell";
 import { TableRow } from "./common(atoms)/table-row";
 
-export const Table = ({ columns, rows, striped, ...props }) => (
-  <table className="w-full" {...props}>
+export const Table = ({ columns, rows, striped, classes, ...props }) => (
+  <table className={clsx("w-full bg-white", classes)} {...props}>
     <thead>
       <TableRow>
         {columns.map((column, columnIdx) => (

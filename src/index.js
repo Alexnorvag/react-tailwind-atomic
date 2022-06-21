@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import App from "./App";
 import { HomePage } from "./pages/home";
+import { AdminPage } from "./pages/admin";
 
 import "./index.css";
 
@@ -13,6 +14,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/admin" element={<AdminPage />} />
         <Route path="/templates" element={<App />} />
       </Routes>
     </BrowserRouter>
